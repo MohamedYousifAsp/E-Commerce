@@ -4,9 +4,9 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    public class Catogary
+    public class Catogary 
     {
-        public int CatogaryID { get; set; }
+        public int Id { get; set; }
         public string CatogaryName { get; set; }
        
     }

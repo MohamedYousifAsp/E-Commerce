@@ -1,0 +1,31 @@
+﻿@model DAL.Entities.Catogary
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="primary">عملية الحذف</h4>
+            <h3>هل أنت متأكد من عملية الحذف</h3>
+            <hr />
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-2">
+                   الصنف
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CatogaryName)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="حذف" class="btn btn-danger" /> |
+                <a asp-action="Index" class="btn btn-outline-info">رجوع</a>
+            </form>
+        </div>
+    </div>
+</div>

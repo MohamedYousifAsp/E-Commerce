@@ -1,0 +1,32 @@
+﻿@model DAL.Entities.Catogary
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="card  ">
+    <div class="card-header">
+        <h4 class="primary">إضافة صنف </h4>
+        <hr />
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label class="control-label">إسم الصنف</label>
+                        <input asp-for="CatogaryName" class="form-control" />
+                        <span asp-validation-for="CatogaryName" class="text-danger"></span>
+                    </div>
+                   
+                    <div class="form-group">
+                        <input type="submit" value="حفظ" class="btn btn-primary" /> |
+                        <a asp-action="Index" class="btn btn-outline-info">رجوع</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
